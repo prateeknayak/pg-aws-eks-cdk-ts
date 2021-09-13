@@ -17,20 +17,22 @@ The [banana-cluster](banana-cluster/) directory holds stacks and charts which
 Unfortunately, when building the k8s chart I get the following error
 
 ```
-/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:34
+/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:34
             throw new Error('cannot find a parent chart (directly or indirectly)');
             ^
 
 Error: cannot find a parent chart (directly or indirectly)
-    at Function.of (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:34:19)
-    at Function.of (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:36:22)
-    at Function.of (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:36:22)
-    at Function.of (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:36:22)
-    at new ApiObject (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/api-object.js:29:36)
-    at new KubeNamespace (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/imports/k8s.js:3085:9)
-    at new Namespaces (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/packages/namespaces/namespaces.js:9:18)
-    at new NamespaceChart (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/banana-cluster/k8s/index.js:8:9)
-    at Object.<anonymous> (/Users/prateek/Development/prateeknayak/pg-aws-cdk-ts/banana-cluster/k8s/index.js:15:1)
+    at Function.of (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:34:19)
+    at Function.of (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:36:22)
+    at Function.of (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:36:22)
+    at Function.of (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/chart.js:36:22)
+    at new ApiObject (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/node_modules/cdk8s/lib/api-object.js:29:36)
+    at new KubeNamespace (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/imports/k8s.js:3085:9)
+    at new Namespaces (/Users/dev/Development/project/pg-aws-eks-cdk-ts/packages/namespaces/namespaces.js:9:18)
+    at new NamespaceChart (/Users/dev/Development/project/pg-aws-eks-cdk-ts/banana-cluster/k8s/index.js:8:9)
+    at Object.<anonymous> (/Users/dev/Development/project/pg-aws-eks-cdk-ts/banana-cluster/k8s/index.js:15:1)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+error Command failed with exit code 1.
 ```
 
 - If I move the namespaces.ts in the k8s directory and update the import path in the index.ts this works
