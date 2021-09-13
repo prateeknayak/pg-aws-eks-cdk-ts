@@ -1,0 +1,44 @@
+{
+  "name": "banana-cluster-k8s",
+  "version": "1.0.0",
+  "description": "Kubernetes resources for banana-cluster",
+  "main": "index.ts",
+  "scripts": {
+    "gen": "cdk8s import k8s --language typescript",
+    "build": "yarn gen && yarn compile && yarn synth",
+    "watch": "tsc -w",
+    "import": "cdk8s import",
+    "synth": "node ./index.js",
+    "compile": "tsc",
+    "test": "jest",
+    "upgrade": "npm i cdk8s@latest cdk8s-cli@latest",
+    "upgrade:next": "npm i cdk8s@next cdk8s-cli@next"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/prateeknayak/pg-aws-cdk-ts"
+  },
+  "keywords": [
+    "cdk8s"
+  ],
+  "author": "prateeknayak",
+  "license": "MIT",
+  "dependencies": {
+    "cdk8s": "^1.0.0-beta.27",
+    "cdk8s-plus-17": "^1.0.0-beta.42",
+    "constructs": "^3.3.147"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "cdk8s-cli": "^1.0.0-beta.37",
+    "jest": "^27.1.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  }
+}
