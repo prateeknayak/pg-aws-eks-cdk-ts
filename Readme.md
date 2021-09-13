@@ -35,3 +35,18 @@ Error: cannot find a parent chart (directly or indirectly)
 
 - If I move the namespaces.ts in the k8s directory and update the import path in the index.ts this works
 - If I convert the namespaces construct to a chart and invoke it from index it works ( check out the main branch )
+
+## Steps to re-produce
+
+- Yarn install dependencies in the namespaces package 
+```
+    cd packages/namespaces && yarn install && cd ../../
+```
+- Yarn install dependencies in the k8s chart dir
+```
+    cd banana-cluster/k8s && yarn install && cd ../../
+```
+- Yarn build in k8s chart dir 
+```
+    cd banana-cluster/k8s && yarn build
+```
